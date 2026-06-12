@@ -123,19 +123,19 @@ console.log(vowels("JavaScript"));
 
 
 //8.) TCC.
-
+/*
 function tcc(word){
     let neword = "";
     let aux = "";
     aux = word.split(" ");
 
     for(i = 0; i <= aux.length - 1 ; i++){
-        if(i === 0){
-            neword = neword + aux[i][0].toUpperCase() + aux[i].slice(1);
+        if(i === 0){ // if to make sure there is a space in between. if i = 0 means we are at the beggining of the loop/first word. no space needed yet
+            neword = neword + aux[i][0].toUpperCase() + aux[i].slice(1); //Accessing each word then the first letter.[i][0]
              
         } 
         else{
-            neword = neword + " " + aux[i][0].toUpperCase() + aux[i].slice(1);
+            neword = neword + " " + aux[i][0].toUpperCase() + aux[i].slice(1); //i > 0 means we are past the first word, add space before next word
              
         }
     }
@@ -145,3 +145,18 @@ function tcc(word){
 }
 
 console.log(tcc("hello world"));
+*/
+
+//9.)Factorial:
+
+function Factorial(num){
+    let fac = 1;
+    for(let i = 1; i <= num; i++){
+        fac = fac * i;
+        
+        
+    }
+    return fac;
+    
+}
+console.log(Factorial(5));
