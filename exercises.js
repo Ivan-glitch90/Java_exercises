@@ -122,3 +122,26 @@ console.log(vowels("JavaScript"));
 
 
 
+//8.) TCC.
+
+function tcc(word){
+    let neword = "";
+    let aux = "";
+    aux = word.split(" ");
+
+    for(i = 0; i <= aux.length - 1 ; i++){
+        if(i === 0){
+            neword = neword + aux[i][0].toUpperCase() + aux[i].slice(1);
+             
+        } 
+        else{
+            neword = neword + " " + aux[i][0].toUpperCase() + aux[i].slice(1);
+             
+        }
+    }
+    
+    return neword;
+    
+}
+
+console.log(tcc("hello world"));
