@@ -147,8 +147,8 @@ function tcc(word){
 console.log(tcc("hello world"));
 */
 
-//9.)Factorial:
-
+//9.)Factorial: //
+/*
 function Factorial(num){
     let fac = 1;
     for(let i = 1; i <= num; i++){
@@ -159,4 +159,26 @@ function Factorial(num){
     return fac;
     
 }
-console.log(Factorial(5));
+console.log(Factorial(5));*/
+
+
+//10.) Prime
+
+function prime(n){
+    let x;
+    if (n <= 1){
+        return "False";
+    }
+
+    for(let i = 2; i < n; i++){
+        x = n % i;
+
+        if(x === 0){
+            return "False"
+        }
+
+    }
+        return "True"
+}
+
+console.log(prime(2))
