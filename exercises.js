@@ -276,15 +276,3 @@ console.log(filter([1,3,5]))
 
 //16. Merging & sorting
 
-function merge(array = [], array2 = []){
-    newarray = array.concat(array2);
-    let sorted = newarray[0];
-    for(i = 0; i <= newarray.length - 1; i++){ 
-        if(sorted < newarray[i] ){
-            sorted.push(newarray[i]);
-        }
-    }
-   return sorted; 
-}
-
-console.log(merge([1,3,5],[1,4,6]));
