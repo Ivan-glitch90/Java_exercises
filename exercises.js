@@ -164,10 +164,11 @@ console.log(Factorial(5));*/
 
 //10.) Prime
 
+/*
 function prime(n){
     let x;
     if (n <= 1){
-        return "False";
+        return "False"; 
     }
 
     for(let i = 2; i < n; i++){
@@ -182,3 +183,60 @@ function prime(n){
 }
 
 console.log(prime(2))
+*/
+
+// 11.) Fizz
+/*
+function Fizz(n){
+    let array = [];
+    
+    for(i=1;i <=n; i++){
+        let fizz = i % 3;
+        let buzz = i % 5;
+        if(fizz === 0 && buzz === 0){
+            array.push("FizzBuzz");
+        }
+        else if(fizz === 0){
+            array.push("fizz");
+        }
+        else if(buzz=== 0){
+            array.push("Buzz");
+        }
+        else{
+            array.push(i);
+        }
+    }
+    return array;
+}
+console.log(Fizz(15));*/
+
+//12.) patern:
+
+/*
+function patern(n){
+    let printer = " ";
+    
+    for(let i = 1; i<= n; i++){ 
+        printer = printer + "\n ";
+    for(let x = 1; x <= i; x++){
+        printer = printer + "*";
+    }   
+    }
+    return printer;
+}
+
+console.log(patern(150));*/
+
+//13.)Array Sum
+
+function sum(array = []){
+    
+    let suma = 0;
+    for(i = 0; i <= array.length - 1; i++){
+        suma = suma + array[i];
+
+    }
+    return suma;
+}
+
+console.log(sum([2,2,2,2,2]));
