@@ -228,7 +228,7 @@ function patern(n){
 console.log(patern(150));*/
 
 //13.)Array Sum
-
+/*
 function sum(array = []){
     
     let suma = 0;
@@ -239,4 +239,52 @@ function sum(array = []){
     return suma;
 }
 
-console.log(sum([2,2,2,2,2]));
+console.log(sum([2,2,2,2,2]));*/
+
+//14.)max value:
+
+/*
+function max(array = []){
+    let m = array[0];
+    for(i = 0; i <= array.length - 1; i++){
+        if(m < array[i]){
+            m = array[i];
+        }
+        
+    }
+    return m;
+
+}
+console.log(max([-1,-5,-3]));*/
+
+//15.)Array filtering:
+/*
+function filter(array = []){
+    let pairs = [];
+     for(i = 0; i <= array.length - 1; i++){
+        n = array[i] % 2;
+        if (n === 0){
+            pairs.push(array[i]);
+        }
+    }
+
+    return pairs;
+}
+
+console.log(filter([1,3,5]))
+*/
+
+//16. Merging & sorting
+
+function merge(array = [], array2 = []){
+    newarray = array.concat(array2);
+    let sorted = newarray[0];
+    for(i = 0; i <= newarray.length - 1; i++){ 
+        if(sorted < newarray[i] ){
+            sorted.push(newarray[i]);
+        }
+    }
+   return sorted; 
+}
+
+console.log(merge([1,3,5],[1,4,6]));
