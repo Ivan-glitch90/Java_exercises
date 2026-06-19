@@ -255,7 +255,7 @@ function max(array = []){
     return m;
 
 }
-console.log(max([-1,-5,-3]));*/
+*/
 
 //15.)Array filtering:
 /*
@@ -271,8 +271,46 @@ function filter(array = []){
     return pairs;
 }
 
-console.log(filter([1,3,5]))
+console.log(filter([1,3,5,4,6]))
+
 */
 
-//16. Merging & sorting
+/*
+setTimeout(()=>{
+   console.log("3");
+},1000)
+
+
+setTimeout(()=>{
+   console.log("2");
+},2000)
+
+
+setTimeout(()=>{
+   console.log("1");
+console.log("GO");
+},3000)
+
+*/
+
+/*
+function delay(ms){ 
+    return new Promise(function(resolve, reject){
+        setTimeout(()=>{
+     resolve();       
+    console.log("It seems that is working!");
+ 
+},ms)
+    });
+}
+delay(2000);
+*/
+
+async function sayHello() {
+    console.log("Hello");
+    delay(2000);
+    console.log("Hi!");
+}
+
+sayHello();
 
