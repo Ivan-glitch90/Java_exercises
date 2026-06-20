@@ -275,6 +275,8 @@ console.log(filter([1,3,5,4,6]))
 
 */
 
+
+//Start lesson Jun 18
 /*
 setTimeout(()=>{
    console.log("3");
@@ -298,13 +300,13 @@ function delay(ms){
     return new Promise(function(resolve, reject){
         setTimeout(()=>{
      resolve();       
-    console.log("It seems that is working!");
+    //console.log("It seems that is working!");
  
 },ms)
     });
 }
 delay(2000);
-*/
+
 
 async function sayHello() {
     console.log("Hello");
@@ -313,4 +315,25 @@ async function sayHello() {
 }
 
 sayHello();
+*/
+//End Lesson
 
+//16.) Array Merging:
+
+//This one was has been one of the hardest so far 😰
+function sorting(array = [],array2 = []){
+    newarray = array.concat(array2); // making the two arrays into one. 
+    for(let x = 0; x <= newarray.length - 1; x++){ // first loop that controls/counts the # of times we go through each element of the newarray
+        for(let i = 0; i <= newarray.length - 1; i++){ //second loop inside the first loo to swap the elements; # > element inside array? 
+        let temp = newarray[i];
+        if (temp > newarray[i + 1]){
+          newarray[i] = newarray[i+1];
+          newarray[i+1] = temp;
+        }
+    }
+
+    }
+return newarray;
+}
+
+console.log(sorting([2,4,6,8],[1,3,5,0]));
