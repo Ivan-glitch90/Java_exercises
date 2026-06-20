@@ -321,14 +321,15 @@ sayHello();
 //16.) Array Merging:
 
 //This one was has been one of the hardest so far 😰
+/*
 function sorting(array = [],array2 = []){
     newarray = array.concat(array2); // making the two arrays into one. 
-    for(let x = 0; x <= newarray.length - 1; x++){ // first loop that controls/counts the # of times we go through each element of the newarray
-        for(let i = 0; i <= newarray.length - 1; i++){ //second loop inside the first loo to swap the elements; # > element inside array? 
-        let temp = newarray[i];
-        if (temp > newarray[i + 1]){
-          newarray[i] = newarray[i+1];
-          newarray[i+1] = temp;
+    for(let x = 0; x <= newarray.length - 1; x++){ // outer loop that controls how many passes we make over the array
+        for(let i = 0; i <= newarray.length - 1; i++){ //second loop inside the first loop to swap the elements; inner loop that compares neighboring elements and swaps them if they are in the wrong order 
+        let temp = newarray[i]; // variable to store the number temporarily.
+        if (temp > newarray[i + 1]){ // comparing the temporarily number to the next one inside the array.
+          newarray[i] = newarray[i+1]; // if greater, move the smaller number to the left
+          newarray[i+1] = temp; // put the original value (temp) into the next position, completing the swap
         }
     }
 
@@ -337,3 +338,60 @@ return newarray;
 }
 
 console.log(sorting([2,4,6,8],[1,3,5,0]));
+
+
+*/
+
+let student = {
+    name: "John",
+    grades:[95,82,77],
+    
+}
+
+function calculate(student){
+    let sum = 0;
+    
+    for(let i = 0; i <= student.grades.length -1; i++){ //Can i use the array inside the object as a normal array? - YES 
+        sum = sum + student.grades[i];
+    }
+    let average = Number((sum / student.grades.length).toFixed(2)); 
+    if(average >= 90 && average <= 100 ){
+        return {
+            name: student.name,
+            average: average,
+            letterGrade:"A"
+}
+    }
+    else if(average >= 80 && average <= 89){
+        return {
+            name: student.name,
+            average:average,
+            letterGrade:"B"
+        }
+    }
+    else if(average >= 70 && average <= 79){
+        return {
+            name: student.name,
+            average:average,
+            letterGrade:"C"
+        }
+
+    }
+    else if(average >= 60 && average <= 69){
+        return {
+            name: student.name,
+            average:average,
+            letterGrade:"D"
+        }
+    }
+    else{
+        return {
+            name: student.name,
+            average:average,
+            letterGrade:"F"
+        }
+    }
+    
+}
+
+console.log(calculate(student));
