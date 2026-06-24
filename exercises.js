@@ -341,7 +341,7 @@ console.log(sorting([2,4,6,8],[1,3,5,0]));
 
 
 */
-
+/*
 let student = {
     name: "John",
     grades:[95,82,77],
@@ -395,3 +395,13 @@ function calculate(student){
 }
 
 console.log(calculate(student));
+*/
+
+const person ={
+    name:"Rusty Robles",
+    age: 3,
+    country:"Scotland"
+};
+
+document.getElementById("output").innerHTML = person.name;
+console.log(person.name,person.age);
